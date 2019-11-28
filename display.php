@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<!-- 	<?php
+	<?php
 	   session_start();
 	   if(empty($_SESSION['login_user'])) {
 	   		header("Location: http://betaweb.csug.rochester.edu/~lli50/login.html");
 	   		die();
 	   }
-	?> -->
+	?>   
 	<head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
@@ -16,7 +16,7 @@
             <a href = "browse.php" class = "btn btn-secondary">Browse</a>
             <a href = "logout.php" class = "btn btn-secondary">Log Out</a>
             <h6 class="display-3 align-self-center text-center">
-            <!-- Welcome back, <?php echo $login_session; ?>! -->
+            Welcome back, <?php echo $_SESSION['login_user']; ?>
 
             </h6> 
         </div>
