@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>  
 <html>
+    <?php
+       session_start();
+    ?> 
     <head>
         <title>Boardgame Browsing</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,7 +16,6 @@
         $database = "lli50_1";
     
         $conn = new mysqli($host, $username, $password, $database);
-        session_start();
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
@@ -44,10 +46,6 @@
 
             <div class="d-flex flex-column bd-highlight mb-3">
             </div>
-
-
-            
-            
         </div>
 
         <?php
