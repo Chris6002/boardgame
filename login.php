@@ -31,9 +31,9 @@
         $result = $conn->query($sql);
         
         if ($result->num_rows != 0) {
-            // $row = $result->fetch_assoc()
             echo "Logged in successfully";
-            $_SESSION['login_user'] = $result['name'];
+            $row = $result->fetch_assoc()
+            $_SESSION['login_user'] = $row['name'];
             header("Location: http://betaweb.csug.rochester.edu/~lli50/display.php");
         } else {
             header("Location: http://betaweb.csug.rochester.edu/~lli50/add_user.php");
