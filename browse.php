@@ -217,19 +217,20 @@
 
             echo "<style>
                 .star {
-                    visibility:hidden;
+                    visibility:visible;
                     font-size:30px;
                     cursor:pointer;
                     color:gold;
                 }
-                .star:checked {
+                .star:before {
                    content: \"\\2605\";
                    position: absolute;
-                   visibility:visible;
+                   visibility:hidden;
                 }
-                .star:before:checked {
+                .star:checked:before {
                    content: \"\\2606\";
                    position: absolute;
+                   visibility:visible;
                 }
             </style>";
 
