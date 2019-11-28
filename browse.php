@@ -33,8 +33,8 @@
 
         <div class = "row justify-content-around">
             <a href = "home.html" class = "btn btn-secondary">Home</a>
-  <!--           <a href = "login.html" class = "btn btn-secondary">Log In</a>
-            <a href = "display.php" class = "btn btn-secondary">Favorite</a> -->
+            <a href = "login.html" class = "btn btn-secondary">Log In</a>
+            <a href = "display.php" class = "btn btn-secondary">Favorite</a>
             <h6 class="display-3 align-self-center text-center">
             Browse
             </h6>
@@ -203,23 +203,23 @@
         
             $result = $conn->query($search);
 
-            // echo "<style>
-            //     .star {
-            //         visibility:hidden;
-            //         font-size:30px;
-            //         cursor:pointer;
-            //         color:gold;
-            //     }
-            //     .star:checked {
-            //        content: \"\\2605\";
-            //        position: absolute;
-            //        visibility:visible;
-            //     }
-            //     .star:before:checked {
-            //        content: \"\\2606\";
-            //        position: absolute;
-            //     }
-            //     </style>"
+            echo "<style>
+                .star {
+                    visibility:hidden;
+                    font-size:30px;
+                    cursor:pointer;
+                    color:gold;
+                }
+                .star:checked {
+                   content: \"\\2605\";
+                   position: absolute;
+                   visibility:visible;
+                }
+                .star:before:checked {
+                   content: \"\\2606\";
+                   position: absolute;
+                }
+                </style>"
 
             echo "<table class = \"table table-striped\"><tr><th>Image</th><th>Game Name</th><th>Rating</th><th>Mechanic</th><th>Category</th><th>Average Play Time</th><th>Favorite?</th></tr>";
 
