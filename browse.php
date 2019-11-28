@@ -223,12 +223,12 @@
                     color:gold;
                 }
                 .star:before {
-                   content: \"\\2605\";
+                   content: \"\\2606\";
                    position: absolute;
-                   visibility:hidden;
+                   visibility:visible;
                 }
                 .star:checked:before {
-                   content: \"\\2606\";
+                   content: \"\\2605\";
                    position: absolute;
                    visibility:visible;
                 }
