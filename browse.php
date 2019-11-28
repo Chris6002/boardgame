@@ -241,7 +241,7 @@
                 while($row = $result->fetch_assoc()) {
                     // echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] ."</td></tr>";
 
-                     echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] . "</td><td>". "<input class=\"star\" type=\"checkbox\" name=\"favorite\" value=\"gameID\">" ."</td></tr>";
+                     echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] . "</td><td>". "<input type=\"checkbox\" name=\"favorite\" value=\"gameID\">" ."</td></tr>";
                 }
             
             } 
