@@ -22,7 +22,7 @@
         } else {
            echo "Error using database: " . $conn->error;
         }
-        // session_start();
+        session_start();
         // Query:
         $email = $_POST['email'];
         $password = $_POST['password'];

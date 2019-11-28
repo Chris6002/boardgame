@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <!-- 	<?php
+	   session_start();
 	   if(empty($_SESSION['login_user'])) {
-	   		header("Location: http://betaweb.csug.rochester.edu/~lli50/home.html");
+	   		header("Location: http://betaweb.csug.rochester.edu/~lli50/login.html");
 	   		die();
 	   }
 	?> -->
