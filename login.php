@@ -33,7 +33,7 @@
         if ($result->num_rows != 0) {
             // $row = $result->fetch_assoc()
             echo "Logged in successfully";
-            $_SESSION['login_user'] = "Chris";
+            $_SESSION['login_user'] = $result['name'];
             header("Location: http://betaweb.csug.rochester.edu/~lli50/display.php");
         } else {
             header("Location: http://betaweb.csug.rochester.edu/~lli50/add_user.php");

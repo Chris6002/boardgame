@@ -13,8 +13,11 @@
 	<body>
 
         <div class = "row justify-content-around">
-            <a href = "browse.php" class = "btn btn-secondary">Browse</a>
-            <a href = "logout.php" class = "btn btn-secondary">Log Out</a>
+        	<div class="d-flex flex-row bd-highlight mb-3">
+                <a href = "browse.php" class = "btn btn-secondary">Browse</a>
+            	<a href = "logout.php" class = "btn btn-secondary">Log Out</a>
+            </div>
+           
             <h6 class="display-3 align-self-center text-center">
             Welcome back, <?php echo $_SESSION['login_user']; ?>
 
