@@ -33,8 +33,8 @@
 
         <div class = "row justify-content-around">
             <a href = "home.html" class = "btn btn-secondary">Home</a>
-            <a href = "login.html" class = "btn btn-secondary">Log In</a>
-            <a href = "display.php" class = "btn btn-secondary">Favorite</a>
+  <!--           <a href = "login.html" class = "btn btn-secondary">Log In</a>
+            <a href = "display.php" class = "btn btn-secondary">Favorite</a> -->
             <h6 class="display-3 align-self-center text-center">
             Browse
             </h6>
@@ -196,9 +196,9 @@
         <div class = "container">
 
             <?php
-            if(isset($_POST['favorite'])) {
-                $name = $_POST['favorite'];
-            }} 
+            // if(isset($_POST['favorite'])) {
+            //     $name = $_POST['favorite'];
+            // }} 
             $search = $search . ";";
         
             $result = $conn->query($search);
