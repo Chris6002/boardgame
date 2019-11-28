@@ -206,23 +206,6 @@
 
         
         <div class = "container">
-            <style>
-                .star {
-                    visibility:hidden;
-                    font-size:30px;
-                    cursor:pointer;
-                    color:gold;
-                }
-                .star:checked {
-                   content: "\2605";
-                   position: absolute;
-                   visibility:visible;
-                }
-                .star:before:checked {
-                   content: "\2606";
-                   position: absolute;
-                }
-            </style>
 
             <?php
             // if(isset($_POST['favorite'])) {
@@ -232,16 +215,31 @@
         
             $result = $conn->query($search);
 
-            
+            echo "<style>
+                .star {
+                    visibility:hidden;
+                    font-size:30px;
+                    cursor:pointer;
+                    color:gold;
+                }
+                .star:checked {
+                   content: \"\\2605\";
+                   position: absolute;
+                   visibility:visible;
+                }
+                .star:before:checked {
+                   content: \"\\2606\";
+                   position: absolute;
+                }
+            </style>";
 
             echo "<table class = \"table table-striped\"><tr><th>Image</th><th>Game Name</th><th>Rating</th><th>Mechanic</th><th>Category</th><th>Average Play Time</th><th>Favorite?</th></tr>";
 
             if ($result->num_rows > 0) {
                 
                 while($row = $result->fetch_assoc()) {
-                    // echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] ."</td></tr>";
 
-                     echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] . "</td><td>". "<input type=\"checkbox\" name=\"favorite\" value=\"gameID\">" ."</td></tr>";
+                     echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] . "</td><td>". "<input class=\"star\" type=\"checkbox\" name=\"favorite\" value=\"gameID\">" ."</td></tr>";
                 }
             
             } 
