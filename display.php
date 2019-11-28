@@ -2,7 +2,7 @@
 <html>
 <!-- 	<?php
 	   if(empty($_SESSION['login_user'])) {
-	   		header("Location: http://betaweb.csug.rochester.edu/~lli50/login.html");
+	   		header("Location: http://betaweb.csug.rochester.edu/~lli50/home.html");
 	   		die();
 	   }
 	?> -->
@@ -16,6 +16,7 @@
             <a href = "logout.php" class = "btn btn-secondary">Log Out</a>
             <h6 class="display-3 align-self-center text-center">
             <!-- Welcome back, <?php echo $login_session; ?>! -->
+
             </h6> 
         </div>
 
