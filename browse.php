@@ -1,5 +1,12 @@
 <!DOCTYPE HTML>  
 <html>
+    <?php
+       session_start();
+       if(empty($_SESSION['login_user'])) {
+            header("Location: http://betaweb.csug.rochester.edu/~lli50/login.html");
+            die();
+       }
+    ?>  
     <head>
         <title>Boardgame Browsing</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -34,7 +41,7 @@
             
             <div class="d-flex flex-row bd-highlight mb-3">
                 <a href = "home.html" class = "btn btn-secondary">Home</a>
-                <a href = "login.html" class = "btn btn-secondary">Log In</a>
+                <a href = "logout.html" class = "btn btn-secondary">Log out</a>
             </div>
             
             <h6 class="display-3 align-self-center text-center">
