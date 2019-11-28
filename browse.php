@@ -33,7 +33,7 @@
 
         <div class = "row justify-content-around">
             
-            <div class="d-flex flex-column bd-highlight mb-3">
+            <div class="d-flex flex-row bd-highlight mb-3">
                 <a href = "home.html" class = "btn btn-secondary">Home</a>
                 <a href = "login.html" class = "btn btn-secondary">Log In</a>
                 <a href = "display.php" class = "btn btn-secondary">Favorite</a>
