@@ -34,6 +34,7 @@
             echo "Logged in successfully";
             $row = $result->fetch_assoc();
             $_SESSION['login_user'] = $row['name'];
+            $_SESSION['login_user_email'] = $row['email'];
             header("Location: http://betaweb.csug.rochester.edu/~lli50/display.php");
         } else {
             header("Location: http://betaweb.csug.rochester.edu/~lli50/add_user.php");

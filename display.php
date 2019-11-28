@@ -21,6 +21,9 @@
             <h6 class="display-3 align-self-center text-center">
             Welcome back, <?php echo $_SESSION['login_user']; ?>
 
+            <div class="d-flex flex-column bd-highlight mb-3">
+            </div>
+
             </h6> 
         </div>
 
