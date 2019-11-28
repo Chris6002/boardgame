@@ -197,33 +197,29 @@
 
             <?php
             if(isset($_POST['favorite'])) {
-                $name = $_POST['color'];
-
-                echo "You chose the following color(s): <br>";
-                foreach ($name as $color){
-                echo $color."<br />";
+                $name = $_POST['favorite'];
             }} 
             $search = $search . ";";
         
             $result = $conn->query($search);
 
-            echo "<style>
-                .star {
-                    visibility:hidden;
-                    font-size:30px;
-                    cursor:pointer;
-                    color:gold;
-                }
-                .star:checked {
-                   content: \"\\2605\";
-                   position: absolute;
-                   visibility:visible;
-                }
-                .star:before:checked {
-                   content: \"\\2606\";
-                   position: absolute;
-                }
-                </style>"
+            // echo "<style>
+            //     .star {
+            //         visibility:hidden;
+            //         font-size:30px;
+            //         cursor:pointer;
+            //         color:gold;
+            //     }
+            //     .star:checked {
+            //        content: \"\\2605\";
+            //        position: absolute;
+            //        visibility:visible;
+            //     }
+            //     .star:before:checked {
+            //        content: \"\\2606\";
+            //        position: absolute;
+            //     }
+            //     </style>"
 
             echo "<table class = \"table table-striped\"><tr><th>Image</th><th>Game Name</th><th>Rating</th><th>Mechanic</th><th>Category</th><th>Average Play Time</th><th>Favorite?</th></tr>";
 
