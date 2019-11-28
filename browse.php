@@ -32,9 +32,12 @@
         ?>
 
         <div class = "row justify-content-around">
-            <a href = "home.html" class = "btn btn-secondary">Home</a>
-            <a href = "login.html" class = "btn btn-secondary">Log In</a>
-            <a href = "display.php" class = "btn btn-secondary">Favorite</a>
+            <div class="d-flex flex-row bd-highlight mb-3">
+             <a href = "home.html" class = "btn btn-secondary">Home</a>
+             <a href = "login.html" class = "btn btn-secondary">Log In</a>
+             <a href = "display.php" class = "btn btn-secondary">Favorite</a>
+            </div>
+            
             <h6 class="display-3 align-self-center text-center">
             Browse
             </h6>
