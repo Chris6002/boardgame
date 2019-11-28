@@ -12,8 +12,6 @@
         $host = "localhost";
         $database = "lli50_1";
         $conn = new mysqli($host, $username, $password, $database);
-
-        session_start();
             
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -24,6 +22,7 @@
         } else {
            echo "Error using  database: " . $conn->error;
         }
+        session_start();
         // Query:
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -34,15 +33,12 @@
         if ($result->num_rows != 0) {
             $row = $result->fetch_assoc()
             echo "Logged in successfully";
-            session_register($row["name"]);
             $_SESSION['login_user'] = $row["name"];
             header("Location: http://betaweb.csug.rochester.edu/~lli50/display.php");
         } else {
             header("Location: http://betaweb.csug.rochester.edu/~lli50/add_user.php");
         } 
-        ?>
-        
-        <?php
+
         $conn->close();
         ?>  
 
