@@ -31,16 +31,17 @@
         $category = $conn->query($categoryN);
         ?>
 
-        <div class = "row justify-content-between">
+        <div class = "row justify-content-around">
             <div class="d-flex flex-column bd-highlight mb-3">
              <a href = "home.html" class = "btn btn-secondary">Home</a>
-             <a href = "login.html" class = "btn btn-secondary">Log In</a>
-             <a href = "display.php" class = "btn btn-secondary">Favorite</a>
             </div>
             
             <h6 class="display-3 align-self-center text-center">
             Browse
             </h6>
+
+            <a href = "login.html" class = "btn btn-secondary">Log In</a>
+            <a href = "display.php" class = "btn btn-secondary">Favorite</a>
             
         </div>
 
@@ -114,7 +115,7 @@
                         <label>Youngest Player</label>
                         <input class = "form-control" type = "number" min = "0" name = "age" value = <?php if (isset($a)){ echo $a;} else {echo "18";}?>>
                     </div>
-                    <input type = "submit" name = "search-submit" Value = "Search" class="btn btn-primary">
+
                     <div class = "form-group">
                         <label><b>Sort By</b></label>
                         <select class = "form-control" name = "sortby" onchange="this.form.submit()">
@@ -126,6 +127,9 @@
                             <option value = "6" <?php if (isset($sort) && $sort=="6") echo "selected";?>>Play Time Descending</option>
                         </select>
                     </div>
+
+                    <input type = "submit" name = "search-submit" Value = "Search" class="btn btn-primary">
+                    
                     
             </div>
 
