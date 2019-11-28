@@ -20,7 +20,7 @@
         $sql = "USE lli50_1;";
         if ($conn->query($sql) === TRUE) {
         } else {
-           echo "Error using  database: " . $conn->error;
+           echo "Error using database: " . $conn->error;
         }
         // session_start();
         // Query:
