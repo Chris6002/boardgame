@@ -33,10 +33,12 @@
 
         <div class = "row justify-content-around">
             <a href = "home.html" class = "btn btn-secondary">Home</a>
+            <a href = "login.html" class = "btn btn-secondary">Log In</a>
+            <a href = "display.php" class = "btn btn-secondary">Favorite</a>
             <h6 class="display-3 align-self-center text-center">
             Browse
             </h6>
-            <a href = "login.html">Log In</a>
+            
         </div>
 
         <?php
@@ -194,16 +196,41 @@
         <div class = "container">
 
             <?php
+            if(isset($_POST['favorite'])) {
+                $name = $_POST['color'];
+
+                echo "You chose the following color(s): <br>";
+                foreach ($name as $color){
+                echo $color."<br />";
+            }} 
             $search = $search . ";";
         
             $result = $conn->query($search);
 
-            echo "<table class = \"table table-striped\"><tr><th>Image</th><th>Game Name</th><th>Rating</th><th>Mechanic</th><th>Category</th><th>Average Play Time</th></tr>";
+            echo "<style>
+                .star {
+                    visibility:hidden;
+                    font-size:30px;
+                    cursor:pointer;
+                    color:gold;
+                }
+                .star:checked {
+                   content: \"\\2605\";
+                   position: absolute;
+                   visibility:visible;
+                }
+                .star:before:checked {
+                   content: \"\\2606\";
+                   position: absolute;
+                }
+                </style>"
+
+            echo "<table class = \"table table-striped\"><tr><th>Image</th><th>Game Name</th><th>Rating</th><th>Mechanic</th><th>Category</th><th>Average Play Time</th><th>Favorite?</th></tr>";
+
             if ($result->num_rows > 0) {
                 
-                
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] ."</td></tr>";
+                    echo "<tr><td> <img style= \"width: 64px\" src=\"". $row["image_url"]. "\"> </td><td> <a href = \"" . $row["bgg_url"] . "\">" . $row["name"]. "</a> </td><td>". $row["avg_rating"] . "</td><td>" . $row["mechanic"]. "</td><td>" . $row["cat_name"] . "</td><td>" . $row["avg_time"] . "</td><td>". "<input class=\"star\" type=\"checkbox\" name=\"favorite\" value=\"gameID\">" ."</td></tr>";
                 }
             
             } 
