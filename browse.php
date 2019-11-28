@@ -217,7 +217,7 @@
 
             echo "<style>
                 .star {
-                    visibility:visible;
+                    visibility:hidden;
                     font-size:30px;
                     cursor:pointer;
                     color:gold;
