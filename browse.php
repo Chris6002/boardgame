@@ -194,6 +194,23 @@
 
         
         <div class = "container">
+            <style>
+                .star {
+                    visibility:hidden;
+                    font-size:30px;
+                    cursor:pointer;
+                    color:gold;
+                }
+                .star:checked {
+                   content: "\2605";
+                   position: absolute;
+                   visibility:visible;
+                }
+                .star:before:checked {
+                   content: "\2606";
+                   position: absolute;
+                }
+            </style>
 
             <?php
             // if(isset($_POST['favorite'])) {
@@ -203,23 +220,7 @@
         
             $result = $conn->query($search);
 
-            echo "<style>
-                .star {
-                    visibility:hidden;
-                    font-size:30px;
-                    cursor:pointer;
-                    color:gold;
-                }
-                .star:checked {
-                   content: \"\\2605\";
-                   position: absolute;
-                   visibility:visible;
-                }
-                .star:before:checked {
-                   content: \"\\2606\";
-                   position: absolute;
-                }
-                </style>"
+            
 
             echo "<table class = \"table table-striped\"><tr><th>Image</th><th>Game Name</th><th>Rating</th><th>Mechanic</th><th>Category</th><th>Average Play Time</th><th>Favorite?</th></tr>";
 
